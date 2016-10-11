@@ -1,0 +1,7 @@
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+	pre-up ifconfig wlan0 up
+	pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+	post-down pkill wpa_supplicant
