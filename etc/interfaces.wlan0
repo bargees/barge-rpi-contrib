@@ -1,5 +1,4 @@
 
-allow-hotplug wlan0
 auto wlan0
 iface wlan0 inet dhcp
 	pre-up ifconfig wlan0 up
