@@ -37,3 +37,10 @@ To do so,
 
 ex.) `sudo ./mount.sh 192.168.1.4:/Users/ailispaw /mnt/nfs`  
 `/Users/ailispaw` is supposed to be exported on the NFS server with `192.168.1.4`.
+
+### Activate bluetooth
+
+```
+[bargee@barge-rpi ~]$ sudo pkg install bluez5_utils
+[bargee@barge-rpi ~]$ sudo ./bluetooth.sh start
+```
