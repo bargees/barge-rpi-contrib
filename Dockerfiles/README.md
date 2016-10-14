@@ -17,7 +17,7 @@ An example of the Active LED Blinking on Raspberry Pi
 
 ```
 [bargee@barge-rpi ~]$ docker build -t lchika .
-[bargee@barge-rpi ~]$ docker run —rm -v /sys:/sys lchika
+[bargee@barge-rpi ~]$ docker run --rm -v /sys:/sys lchika
 ```
 
 ### MJPG-streamer
