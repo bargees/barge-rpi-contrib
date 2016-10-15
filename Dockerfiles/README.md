@@ -17,6 +17,11 @@ And then,
 
 ```
 [bargee@barge-rpi ~]$ docker build -t ailispaw/alsa-utils .
+```
+
+Or just run the image from Docker Hub,
+
+```
 [bargee@barge-rpi ~]$ docker run -it --rm --device /dev/snd:/dev/snd ailispaw/alsa-utils
 [root@5b83bae544df /]# aplay -l
 **** List of PLAYBACK Hardware Devices ****
@@ -49,6 +54,11 @@ The ARM version of https://github.com/aacebedo/dnsdock
 
 ```
 [bargee@barge-rpi ~]$ docker build -t ailispaw/dnsdock:armhf .
+```
+
+Or just run the image from Docker Hub,
+
+```
 [bargee@barge-rpi ~]$ docker run -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 0.0.0.0:53:53/udp --name dnsdock ailispaw/dnsdock:armhf
 ```
 
@@ -69,6 +79,11 @@ Stream a Video from Raspberry Pi with a Linux-UVC Compatible Webcam
 
 ```
 [bargee@barge-rpi ~]$ docker build -t ailispaw/mjpg-streamer .
+```
+
+Or just run the image from Docker Hub,
+
+```
 [bargee@barge-rpi ~]$ docker run -d --device=/dev/video0 -p 8080:8080 ailispaw/mjpg-streamer
 ```
 
