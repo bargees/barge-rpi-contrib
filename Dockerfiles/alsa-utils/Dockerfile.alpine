@@ -1,0 +1,5 @@
+FROM armhf/alpine
+
+RUN apk --no-cache add alsa-utils
+
+CMD [ "sh" ]
