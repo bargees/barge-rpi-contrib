@@ -24,4 +24,3 @@ var blink = setInterval(function() {
   }
 
 }, 1000);
-

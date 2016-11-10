@@ -16,4 +16,3 @@ RUN apk --no-cache add --virtual build-deps go make git && \
     rm -rf "$GOPATH"
 
 ENTRYPOINT [ "dnsdock" ]
-
