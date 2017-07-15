@@ -1,4 +1,4 @@
-## Dockerfiles for Barge RPi (armhf)
+## Dockerfiles for Barge RPi (arm64v8)
 
 ### alsa-utils
 
@@ -16,13 +16,13 @@ To activate audio on Raspberry Pi,
 And then,
 
 ```
-[bargee@barge-rpi ~]$ docker build -t ailispaw/alsa-utils .
+[bargee@barge-rpi ~]$ docker build -t ailispaw/alsa-utils:arm64v8 .
 ```
 
 Or just run the image from Docker Hub,
 
 ```
-[bargee@barge-rpi ~]$ docker run -it --rm --device /dev/snd:/dev/snd ailispaw/alsa-utils
+[bargee@barge-rpi ~]$ docker run -it --rm --device /dev/snd:/dev/snd ailispaw/alsa-utils:arm64v8
 [root@5b83bae544df /]# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
@@ -53,13 +53,13 @@ https://hub.docker.com/r/ailispaw/alsa-utils/
 The ARM version of https://github.com/aacebedo/dnsdock
 
 ```
-[bargee@barge-rpi ~]$ docker build -t ailispaw/dnsdock:armhf .
+[bargee@barge-rpi ~]$ docker build -t ailispaw/dnsdock:arm64v8 .
 ```
 
 Or just run the image from Docker Hub,
 
 ```
-[bargee@barge-rpi ~]$ docker run -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 0.0.0.0:53:53/udp --name dnsdock ailispaw/dnsdock:armhf
+[bargee@barge-rpi ~]$ docker run -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 0.0.0.0:53:53/udp --name dnsdock ailispaw/dnsdock:arm64v8
 ```
 
 https://hub.docker.com/r/ailispaw/dnsdock/
@@ -69,8 +69,8 @@ https://hub.docker.com/r/ailispaw/dnsdock/
 An example of the Active LED Blinking on Raspberry Pi
 
 ```
-[bargee@barge-rpi ~]$ docker build -t lchika .
-[bargee@barge-rpi ~]$ docker run --rm -v /sys:/sys lchika
+[bargee@barge-rpi ~]$ docker build -t lchika:arm64v8 .
+[bargee@barge-rpi ~]$ docker run --rm -v /sys:/sys lchika:arm64v8
 ```
 
 ### MJPG-streamer
@@ -78,13 +78,13 @@ An example of the Active LED Blinking on Raspberry Pi
 Stream a Video from Raspberry Pi with a Linux-UVC Compatible Webcam
 
 ```
-[bargee@barge-rpi ~]$ docker build -t ailispaw/mjpg-streamer .
+[bargee@barge-rpi ~]$ docker build -t ailispaw/mjpg-streamer:arm64v8 .
 ```
 
 Or just run the image from Docker Hub,
 
 ```
-[bargee@barge-rpi ~]$ docker run -d --device=/dev/video0 -p 8080:8080 ailispaw/mjpg-streamer
+[bargee@barge-rpi ~]$ docker run -d --device=/dev/video0 -p 8080:8080 ailispaw/mjpg-streamer:arm64v8
 ```
 
 https://hub.docker.com/r/ailispaw/mjpg-streamer/
